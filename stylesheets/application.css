@@ -1,0 +1,181 @@
+
+/*********************************************************************
+ *
+ * Fonts
+ *
+ *********************************************************************/
+
+@font-face {
+  font-family: 'GibsonLight';
+  src: url('../fonts/Gibson-Light-webfont.eot');
+  src: url('../fonts/Gibson-Light-webfont.eot?iefix') format('eot'),
+  url('../fonts/Gibson-Light-webfont.woff') format('woff'),
+  url('../fonts/Gibson-Light-webfont.ttf') format('truetype'),
+  url('../fonts/Gibson-Light-webfont.svg#webfontZam02nTh') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*********************************************************************
+ *
+ * Layout
+ *
+ *********************************************************************/
+
+body {
+  background: url('../images/layout/background.jpg') no-repeat #000 fixed;
+  background-size: 100%;
+  color: #fff;
+  font-family: 'GibsonLight', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+header, #content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 90px;
+}
+
+#content {
+  margin-top: 40px;
+}
+
+/*********************************************************************
+ *
+ * Header
+ *
+ *********************************************************************/
+
+header {
+  position: relative;
+}
+
+#menu {
+  list-style-type: none;
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu li:first-child {
+  margin-right: 30px;
+}
+
+#menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+#menu li a.selected {
+  color: #999999;
+}
+
+/*********************************************************************
+ *
+ * Gallery
+ *
+ *********************************************************************/
+
+#intro {
+  background: rgba(0,0,0,0.18);
+  padding: 20px;
+  margin: 40px 20px 40px 0;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery a {
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 300px;
+}
+
+.gallery .box {
+  float: left;
+  position: relative;
+  width: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.gallery .box.single { height: 320px; }
+.gallery .box.double { height: 640px; }
+.gallery .box.triple { height: 960px; }
+
+/*********************************************************************
+ *
+ * About
+ *
+ *********************************************************************/
+
+#content.about {
+  display: none;
+}
+
+#content.about #portrait {
+  float: left;
+  width: 38%;
+}
+
+#content.about h2, #content.about p {
+  margin-left: 40%;
+  padding-right: 10px;
+}
+
+/*********************************************************************
+ *
+ * Modal
+ *
+ *********************************************************************/
+
+button.mfp-arrow-right {
+  background: url(/images/modal/next.png) no-repeat 50%;
+}
+
+button.mfp-arrow-left {
+  background: url(/images/modal/prev.png) no-repeat 50%;
+}
+
+.mfp-arrow:before, .mfp-arrow:after {
+  content: none
+}
+
+/* Zoom Effect */
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
