@@ -86,10 +86,48 @@ header {
  *
  *********************************************************************/
 
-#intro {
+#intro,
+.message {
   background: rgba(0,0,0,0.18);
   padding: 20px;
   margin: 40px 20px 40px 0;
+}
+
+.message.togoart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.message.togoart .col {
+  float: left;
+  width: 33.3333%;
+}
+
+.message.togoart .col.text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.message.togoart h2 {
+  font-size: 80px;
+  padding: 0;
+  margin: 0 0 10px 0;
+  line-height: 0.8em;
+}
+
+@media (max-width: 779px) {
+  .message.togoart .col,
+  .message.togoart .col.text {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px 0;
+  }
 }
 
 .gallery {
